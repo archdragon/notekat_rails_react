@@ -1,12 +1,13 @@
 class Note extends React.Component {
   render () {
     return (
-      <div className="react_note">
-        {
-          this.props.items.map(function(item) {
-            return <NoteItem data={item} />
-          })
-        }
+      <div className="note-body">
+      {
+        this.props.items.map(function(item) {
+          return <NoteItem data={item} size="large" />
+        })
+      }
+      <AddNoteItem />
       </div>
     );
   }

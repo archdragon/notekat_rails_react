@@ -1,0 +1,14 @@
+.note-item-box {
+  border: 1px solid red;
+  float: left;
+  padding: 1em;
+  margin: 0 1em 1em 0;
+}
+
+.note-item-box-small {
+  width: calc(50% - 1em);
+}
+
+.note-item-box-large {
+  width: calc(100% - 1em);
+}

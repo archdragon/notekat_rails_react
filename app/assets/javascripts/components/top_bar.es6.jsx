@@ -1,7 +1,7 @@
 class TopBar extends React.Component {
   render () {
     return (
-      <div className="react_top-bar top-bar">
+      <div className="react_top-bar top_bar">
         <div className="navbar navbar-default">
           <button type="button" className="navbar-toggle collapsed">
             <span className="icon-bar"></span>

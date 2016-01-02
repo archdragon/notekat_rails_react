@@ -1,7 +1,7 @@
 class MainMenu extends React.Component {
   render () {
     return (
-      <div className="react_main-menu main-menu">
+      <div className="main-menu">
         <header>
           <div>Label: {this.props.name}</div>
         </header>

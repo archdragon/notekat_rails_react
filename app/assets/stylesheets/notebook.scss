@@ -1,5 +1,8 @@
 .container-flex {
+  align-content: stretch;
+  align-items: stretch;
   display: flex;
+  height: 100%;
 }
 
 .container-main {

@@ -1,4 +1,24 @@
-.top_bar {
-  background-color: #eee;
+@import "compass/css3/border-radius";
+
+$responsive-color-main: #3baeda;
+$light-color-main: #fff;
+
+.top_bar .navbar {
+  @include border-radius(0);
+  background-color: $responsive-color-main;
+  margin: 0;
   width: 100%;
+}
+
+.top_bar .navbar-brand,
+.top_bar .navbar-default .navbar-nav > li > a,
+.top_bar a {
+  color: $light-color-main;
+}
+
+.top_bar .navbar-brand:hover,
+.top_bar .navbar-default .navbar-nav > li > a:hover,
+.top_bar a:hover {
+  color: $light-color-main;
+  background-color: rgba(0, 0, 0, 0.05);
 }
