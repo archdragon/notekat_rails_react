@@ -1,3 +1,4 @@
+@import "bootstrap_variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "notebook";
@@ -5,3 +6,5 @@
 @import "top_bar";
 @import "note";
 @import "note_item";
+
+@import "welcome";

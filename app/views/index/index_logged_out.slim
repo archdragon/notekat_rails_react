@@ -1,4 +1,4 @@
-nav.navbar.navbar-default
+nav.navbar.navbar-default.navbar-logged-out.navbar-fixed-top
   .container
     .navbar-header
       button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#top-nav"
@@ -14,28 +14,37 @@ nav.navbar.navbar-default
 
       ul.nav.navbar-nav.navbar-right
         li
-          a href="#" Log In
+          a href="#" data-target="#modal-log-in" data-toggle="modal" Log In
 
-.container
-  .row
-    .col-sm-10
-      | You are logged out
+header#welcome-header
+  .container
+    .row
+      .col-xs-12
+        h1 Notekat
+        p Organize your thoughts
+        p
+          button.btn.btn-lg.btn-primary Sign Up
 
-    .col-sm-2
-      = form_tag session_path(:account), class: 'form-horizontal' do
-        .form-group
-          = text_field_tag 'account[email]', nil, class: 'form-control'
+.modal.modal-fade role="dialog" id="modal-log-in"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        .modal-title Log In
+      .modal-body
+        = form_tag session_path(:account), class: 'form-horizontal' do
+          .form-group
+            = text_field_tag 'account[email]', nil, class: 'form-control'
 
-        .form-group
-          = password_field_tag 'account[password]', nil, class: 'form-control'
+          .form-group
+            = password_field_tag 'account[password]', nil, class: 'form-control'
 
-        .form-group
-          = check_box_tag 'account[remember_me]'
-          '  
-          = label_tag 'account[remember_me]', 'Remember me'
+          .form-group
+            = check_box_tag 'account[remember_me]'
+            '  
+            = label_tag 'account[remember_me]', 'Remember me'
 
-        .form-group
-          button.btn.btn-primary.form-control Sign in
+          .form-group
+            button.btn.btn-primary.form-control Sign in
 
-        .form-group
-          = link_to "Forgot your password?", new_password_path(:account)
+          .form-group
+            = link_to "Forgot your password?", new_password_path(:account)

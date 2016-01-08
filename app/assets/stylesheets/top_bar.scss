@@ -22,3 +22,23 @@ $light-color-main: #fff;
   color: $light-color-main;
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+/* Logged out */
+.navbar-default.navbar-logged-out .navbar-nav > .active > a,
+.navbar-default.navbar-logged-out .navbar-nav > li > a,
+.navbar-default.navbar-logged-out .navbar-brand {
+  color: #fff;
+  background-color: transparent;
+  border-width: 0;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+  text-transform: uppercase;
+}
+
+.navbar-logged-out {
+  background-color: transparent;
+  border-width: 0;
+}
