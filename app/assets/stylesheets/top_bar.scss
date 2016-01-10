@@ -1,4 +1,4 @@
-@import "compass/css3/border-radius";
+@import "compass/css3";
 
 $responsive-color-main: #3baeda;
 $light-color-main: #fff;
@@ -41,4 +41,23 @@ $light-color-main: #fff;
 .navbar-logged-out {
   background-color: transparent;
   border-width: 0;
+  margin-top: 1em;
+}
+
+.navbar-default.navbar-logged-out .navbar-nav > li > a.sign-up-link {
+  @include background-image(linear-gradient(white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%));
+  @include background-size(200% 200%);
+  @include transition(0.3s all);
+  background-position: 0% 100%;
+  border: 1px solid white;
+  padding: 0.5em 0.7em;
+  margin-top: 0.5em;
+  margin-left: 2em;
+
+  &:hover {
+    @include transition(0.3s all);
+    background-position: 0% 0%;
+    color: #333;
+    opacity: 1;
+  }
 }
