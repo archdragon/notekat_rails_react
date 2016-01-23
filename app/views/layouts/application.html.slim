@@ -1,8 +1,10 @@
 html
   head
+    = csrf_meta_tags
+    meta name="form-token" content="#{form_authenticity_token}"
+
     title Notekat
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = csrf_meta_tags
 
 body
   = yield

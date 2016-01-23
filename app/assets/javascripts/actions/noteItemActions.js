@@ -16,9 +16,11 @@ function requestAddNoteItem(note) {
 }
 
 function receiveAddNoteItem(note, json) {
+  alert('receiveAddNoteItem');
   return {
     type: "RECEIVE_ADD_NOTE_ITEM",
     note,
+    data: json,
     receivedAt: Date.now()
   }
 }
@@ -26,15 +28,19 @@ function receiveAddNoteItem(note, json) {
 export function fetchAddNoteItem(note) {
   return dispatch => {
     dispatch(requestAddNoteItem(note))
+  
+    let authToken = $('meta[name=csrf-token]').attr('content');
+    
+    $.ajax({
+      url: '/note_items',
+      method: 'POST',
+      data: {
+        authenticity_token: authToken,
+        note: note
+			}
+		}).done(function(data){
+      dispatch(receiveAddNoteItem(note, data))
+		})
 
-    let options = {
-      method: 'POST'
-		}
-
-		return fetch('/note_items.json', options)
-      .then(response => response.json())
-      .then(json =>
-        dispatch(receiveAddNoteItem(note, json))
-      )
   }
 }

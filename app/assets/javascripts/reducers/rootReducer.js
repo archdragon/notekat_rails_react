@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import notebooks from './notebooks'
+import notebooks from './notebooksReducer'
+import noteItems from './noteItemsReducer'
 
 const rootReducer = combineReducers({
-  notebooks
+  notebooks,
+  noteItems
 })
 
 export default rootReducer

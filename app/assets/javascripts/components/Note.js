@@ -20,7 +20,8 @@ class Note extends React.Component {
 }
 
 Note.propTypes = {
-  items:  React.PropTypes.array
+  items:  React.PropTypes.array,
+  onNoteAddClick: React.PropTypes.func
 };
 
 export default Note

@@ -20,14 +20,10 @@ export default class App extends Component {
   render() {
     const { dispatch } = this.props
 
-    let note = {
-      name: "Added note name"
-    }
-
     return (
       <div className="container-flex">
         <Menu items={this.menuItems()} />
-        <Note items={this.noteItems()} onNoteAddClick={(note) => dispatch(fetchAddNoteItem(note))} />
+        <Note items={this.props.noteItems} onNoteAddClick={(note) => dispatch(fetchAddNoteItem(note))} />
       </div>
 		)
 	}
@@ -35,8 +31,7 @@ export default class App extends Component {
 
 function select(state) {
   return {
-    visibleTodos: {},
-    visibilityFilter: {}
+    noteItems: state.noteItems
   }
 }
 

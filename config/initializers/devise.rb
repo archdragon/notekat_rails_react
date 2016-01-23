@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '28f0f6316b50ac812ce0306a586cfa845cee964a1ed2058864b51e28dae9ce0909f71d46ce4a63004022ac00c18a7af0c7bdc310c70eace1beb11ecaca92fce4'
+  config.secret_key = '28f0f6316b50ac812ce0306a586cfa845cee964a1ed2058864b51e28dae9ce0909f71d46ce4a63004022ac00c18a7af0c7bdc310c70eace1beb11ecaca92fce4'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -85,7 +85,7 @@ Devise.setup do |config|
   # avoid CSRF token fixation attacks. This means that, when using AJAX
   # requests for sign in and sign up, you need to get a new CSRF token
   # from the server. You can disable this option at your own risk.
-  # config.clean_up_csrf_token_on_authentication = true
+  config.clean_up_csrf_token_on_authentication = false
 
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 10. If

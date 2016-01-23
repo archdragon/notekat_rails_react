@@ -15,7 +15,7 @@ gem 'slim'
 
 # Modern JS
 gem 'bower-rails'
-gem "browserify-rails"
+gem 'browserify-rails'
 
 
 source 'https://rails-assets.org' do
