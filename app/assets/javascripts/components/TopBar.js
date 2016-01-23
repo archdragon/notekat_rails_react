@@ -1,3 +1,5 @@
+import React from 'react'
+
 class TopBar extends React.Component {
   render () {
     return (
@@ -25,6 +27,8 @@ class TopBar extends React.Component {
   }
 }
 
-MainMenu.propTypes = {
+TopBar.propTypes = {
   logout_link: React.PropTypes.string,
 };
+
+export default TopBar

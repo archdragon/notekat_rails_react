@@ -1,3 +1,5 @@
+import React from 'react';
+
 class MenuItem extends React.Component {
   render () {
     return (
@@ -8,7 +10,9 @@ class MenuItem extends React.Component {
   }
 }
 
-MainMenu.propTypes = {
+MenuItem.propTypes = {
   name:  React.PropTypes.string,
   link:  React.PropTypes.string
 };
+
+export default MenuItem

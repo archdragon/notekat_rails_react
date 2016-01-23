@@ -1,4 +1,7 @@
-class MainMenu extends React.Component {
+import React from 'react';
+import MenuItem from '../components/MenuItem.js'
+
+class Menu extends React.Component {
   render () {
     return (
       <div className="main-menu">
@@ -19,7 +22,9 @@ class MainMenu extends React.Component {
   }
 }
 
-MainMenu.propTypes = {
+Menu.propTypes = {
   name:  React.PropTypes.string,
   items: React.PropTypes.array
 };
+
+export default Menu
